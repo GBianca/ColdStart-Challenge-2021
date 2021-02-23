@@ -16,7 +16,9 @@ export default {
 </script>
 
 <template>
-<auth-login provider="Facebook">
-<auth-login provider="Google">
-<auth-login provider="GitHub">
+<div>
+<auth-login provider="Facebook"/>
+<auth-login provider="Google"/>
+<auth-login provider="GitHub"/>
+  </div>
 </template>
