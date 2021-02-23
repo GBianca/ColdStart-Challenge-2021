@@ -1,18 +1,24 @@
 {
   "routes": [
     {
-      "route": "/api/catalog"
+      "route": "/api/catalog",
+      "allowedRoles": ["authenticated"]
     },
     {
       "route": "/*",
       "serve": "/index.html",
-      "statusCode": 200
+      "statusCode": 200,
+      "allowedRoles": ["authenticated"]
     }
   ],
   "platformErrorOverrides": [
     {
       "errorType": "NotFound",
       "serve": "/404.html"
+    },
+    {
+      "route": "/login",
+      "serve": "/.auth/login/facebook"
     }
   ]
 }
