@@ -1,5 +1,7 @@
 <script>
 import HeaderBar from '@/components/header-bar.vue';
+import AuthLogout from '@/components/auth-logout.vue';
+import AuthLogin from '@/components/auth-login.vue';
 
 export default {
   name: 'App',
@@ -8,6 +10,8 @@ export default {
   },
   components: {
     HeaderBar,
+    AuthLogout,
+    AuthLogin,
   },
 };
 </script>
@@ -15,6 +19,8 @@ export default {
 <template>
   <div id="app">
     <HeaderBar />
+    <auth-logout/>
+    <auth-login provider="Facebook"/>
     <div class="section columns">
       <main class="column">
         <router-view />

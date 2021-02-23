@@ -15,10 +15,6 @@
     {
       "errorType": "NotFound",
       "serve": "/404.html"
-    },
-    {
-      "route": "/login",
-      "serve": "/.auth/login/facebook"
     }
   ]
 }
