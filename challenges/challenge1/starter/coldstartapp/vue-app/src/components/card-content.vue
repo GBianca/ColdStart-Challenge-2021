@@ -63,7 +63,7 @@ export default {
       <p class="description">{{ description }}</p>
     </div>
     <div class="card-action">
-      <button v-if="!user" v-on:click="placeOrder">Preorder</button>
+      <button v-if="user" v-on:click="placeOrder">Preorder</button>
       <div v-if="preorderedItems > 0"> Ordered {{preorderedItems}} times.</div>
   </div>
   </div>

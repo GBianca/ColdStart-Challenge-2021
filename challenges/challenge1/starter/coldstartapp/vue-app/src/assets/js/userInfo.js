@@ -1,6 +1,6 @@
 async function getUserInfo() {
   try {
-    console.log('getUserInfo');
+    console.log('Getting User');
     const response = await fetch('/.auth/me');
     const payload = await response.json();
     const { clientPrincipal } = payload;

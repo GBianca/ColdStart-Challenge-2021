@@ -11,12 +11,19 @@ export default {
     AuthLogout,
     AuthLogin,
   },
+  props: {
+    user: {
+      type: Object,
+    },
+  },
   data() {
     return {
-      userInfo: getUserInfo(),
     };
   },
   methods: {
+    async created() {
+      this.user = await getUserInfo();
+    },
   },
 };
 </script>
@@ -31,8 +38,8 @@ export default {
         </div>
       </div>
     <div class="navbar-end">
-      <auth-logout v-if="userInfo !== null"/>
-      <auth-login v-if="userInfo === null"  provider="github"/>
+      <auth-logout v-if="!user"/>
+      <auth-login v-if="user"  provider="github"/>
       </div>
     </nav>
   </header>
