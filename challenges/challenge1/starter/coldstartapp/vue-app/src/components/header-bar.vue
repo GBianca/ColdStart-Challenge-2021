@@ -38,8 +38,8 @@ export default {
         </div>
       </div>
     <div class="navbar-end">
-      <auth-login v-if="user!=null"  provider="github"/>
-      <auth-logout v-if="!user"/>
+      <auth-login v-if="user !== null"  provider="github"/>
+      <auth-logout v-if="user === null"/>
       </div>
     </nav>
   </header>
