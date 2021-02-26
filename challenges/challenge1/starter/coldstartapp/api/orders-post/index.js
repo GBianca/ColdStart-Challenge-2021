@@ -19,4 +19,5 @@ module.exports = async function (context, req) {
 
    var response = await queueClient.sendMessage(JSON.stringify(data));
    context.res.status(response.status);
+   context.res.end(data);
 };

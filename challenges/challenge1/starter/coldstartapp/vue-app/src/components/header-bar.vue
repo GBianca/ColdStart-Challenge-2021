@@ -1,13 +1,19 @@
 <script>
 import HeaderBarBrand from '@/components/header-bar-brand.vue';
+import AuthLogout from '@/components/auth-logout.vue';
+import AuthLogin from '@/components/auth-login.vue';
+import getUserInfo from '@/assets/js/userInfo';
 
 export default {
   name: 'HeaderBar',
   components: {
     HeaderBarBrand,
+    AuthLogout,
+    AuthLogin,
   },
   data() {
     return {
+      userInfo: getUserInfo(),
     };
   },
   methods: {
@@ -23,6 +29,10 @@ export default {
         <div class="navbar-start">
           <router-link class="navbar-item nav-home" to="/">Home</router-link>
         </div>
+      </div>
+    <div class="navbar-end">
+      <auth-logout v-if="userInfo"/>
+      <auth-login v-if="!userInfo"  provider="github"/>
       </div>
     </nav>
   </header>

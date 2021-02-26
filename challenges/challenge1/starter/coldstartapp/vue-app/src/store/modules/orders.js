@@ -32,5 +32,6 @@ export default {
     },
   },
   getters: {
+    orders: (state) => state.orders,
   },
 };
