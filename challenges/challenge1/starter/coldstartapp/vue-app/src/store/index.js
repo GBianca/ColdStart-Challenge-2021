@@ -3,8 +3,6 @@ import Vuex from 'vuex';
 import catalogModule from './modules/catalog';
 import ordersModule from './modules/orders';
 
-// export * from './modules/mutation-types';
-
 Vue.use(Vuex);
 
 export default new Vuex.Store({
