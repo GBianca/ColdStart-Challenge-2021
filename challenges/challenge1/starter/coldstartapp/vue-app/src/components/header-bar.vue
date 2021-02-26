@@ -31,8 +31,8 @@ export default {
         </div>
       </div>
     <div class="navbar-end">
-      <auth-logout v-if="userInfo"/>
-      <auth-login v-if="!userInfo"  provider="github"/>
+      <auth-logout v-if="userInfo !== undefined"/>
+      <auth-login v-if="userInfo === undefined"  provider="github"/>
       </div>
     </nav>
   </header>
